@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-import React, { useEffect } from 'react';
+import React, {  useEffect } from 'react';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import { BrowserRouter,Routes , Route } from 'react-router-dom';
@@ -10,6 +10,9 @@ import Teachers from './Components/PageComponents/Teachers';
 import Contacts from './Components/PageComponents/Contacts';
 import Abouts from './Components/PageComponents/Abouts';
 import Page404 from './Components/Page404/Page404';
+import User from './Components/User/User';
+import Login from './Components/Login/Login';
+import Prodected from './Components/Cartcomponents/Prodected';
 
 
 
@@ -24,11 +27,13 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path='/' element={<Home/>} />
+          <Route path='/' element={ <Prodected Component={ Home } />} />
           <Route path='Coursess' element={<Coursess/>} />
           <Route path='/Teachers' element={<Teachers />}/>
           <Route path='/Contact' element={<Contacts/>}/>
           <Route path='/About' element={<Abouts/>}/>
+          <Route path='/User/:name' element={<User/>}/>
+          <Route path='Login' element={<Login/>}/>
           <Route path='/*' element={<Page404/>}/>
         </Routes>
         <Footer/>

@@ -7,6 +7,7 @@ function Abouts() {
     <Box sx={{marginTop:'70px'}}>
         <Container maxWidth="xl">
             <About/>
+            
         </Container>
     </Box>
   )

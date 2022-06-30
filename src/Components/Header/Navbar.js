@@ -1,9 +1,9 @@
 import React from 'react'
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-// import { MenuItem } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { Link } from 'react-router-dom';
+// import Login from '../Login/Login';
 
 
 const useStyles = makeStyles({
@@ -67,10 +67,11 @@ function Navbar() {
                         <Link key={name} to={path} className={classes.menu} >
                             {name}
                         </Link>
+                        
                     ))
                 }
                 <Box>
-                    <Button className={classes.login} variant="contained" href="#contained-buttons">
+                    <Button className={classes.login} variant="contained" href="Login">
                         Sign In
                     </Button>
                 </Box>
